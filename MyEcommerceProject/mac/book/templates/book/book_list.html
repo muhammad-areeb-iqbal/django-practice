@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+{% for message in messages %}
+
+                    <div class="alert alert-success">
+                        <a class="close" href="#" data-dismiss="alert">×</a>
+
+                        {{ message }}
+
+                    </div>
+            {% endfor %}
+
+    <ul>
+    {% for b in book_list %}
+        <a href="{{b.id}}/" ><li>{{b.title}}</li></a>
+    {% endfor %}
+    </ul>
+</body>
+</html>
